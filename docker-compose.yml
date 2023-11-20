@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  nextdns:
+    container_name: nextdns
+    image: howcool/nextdns
+    environment:
+      - NEXTDNS_ID=<your_id>
+    ports:
+      - 3000:3000/udp
+    restart: unless-stopped
